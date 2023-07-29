@@ -243,6 +243,8 @@ const startLogOutTimer = function () {
 // Event handlers
 let currentAccount, timer;
 
+containerApp.style.display = 'none';
+
 // FAKE LOGIN
 // currentAccount = account1;
 // updateUI(currentAccount);
@@ -253,6 +255,7 @@ btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
 
   containerMessage.style.display = 'none';
+  containerApp.style.display = 'grid';
 
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
