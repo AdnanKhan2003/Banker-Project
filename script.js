@@ -63,6 +63,7 @@ const labelTimer = document.querySelector('.timer');
 
 const containerApp = document.querySelector('.app');
 const containerMovements = document.querySelector('.movements');
+const containerMessage = document.querySelector('.enter-message');
 
 const btnLogin = document.querySelector('.login__btn');
 const btnTransfer = document.querySelector('.form__btn--transfer');
@@ -250,6 +251,8 @@ let currentAccount, timer;
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
   e.preventDefault();
+
+  containerMessage.style.display = 'none';
 
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value

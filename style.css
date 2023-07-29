@@ -4,6 +4,20 @@
  * Have fun! 😁
  */
 
+:root {
+  --date-font-size: 1.1rem;
+  --summary-label-font-size: 1.2rem;
+  --btn-sort-font-size: 1.3rem;
+  --balance-date-font-size: 1.4rem;
+  --input-main-font-size: 1.6rem;
+  --amt-font-size: 1.7rem;
+  --main-font-size: 1.9rem;
+  --balance-label-font-size: 2.2rem;
+  --balance-font-size: 4.5rem;
+  --main-font-family: 'Poppins', sans-serif;
+  --logo-height: 5.25rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,13 +44,34 @@ nav {
   padding: 0 2rem;
 }
 
+.enter-message {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  text-align: center;
+  margin-top: 8rem;
+  border-radius: 0.4rem;
+}
+
+.username-password-table {
+  width: 60%;
+  margin: 2rem auto 0;
+  font-size: 1.5rem;
+  border: 1px solid #333;
+}
+.username-password-table th,
+.username-password-table td {
+  border: 1px solid #333;
+  padding: 0.7rem 1.6rem;
+}
+
 .welcome {
-  font-size: 1.9rem;
+  font-size: var(--main-font-size);
   font-weight: 500;
 }
 
 .logo {
-  height: 5.25rem;
+  height: var(--logo-height);
 }
 
 .login {
@@ -46,7 +81,7 @@ nav {
 .login__input {
   border: none;
   padding: 0.5rem 2rem;
-  font-size: 1.6rem;
+  font-size: var(--input-main-font-size);
   font-family: inherit;
   text-align: center;
   width: 12rem;
@@ -107,18 +142,18 @@ nav {
 }
 
 .balance__label {
-  font-size: 2.2rem;
+  font-size: var(--balance-label-font-size);
   font-weight: 500;
   margin-bottom: -0.2rem;
 }
 
 .balance__date {
-  font-size: 1.4rem;
+  font-size: var(--balance-date-font-size);
   color: #888;
 }
 
 .balance__value {
-  font-size: 4.5rem;
+  font-size: var(--balance-font-size);
   font-weight: 400;
 }
 
@@ -138,7 +173,7 @@ nav {
 }
 
 .movements__type {
-  font-size: 1.1rem;
+  font-size: var(--date-font-size);
   text-transform: uppercase;
   font-weight: 500;
   color: #fff;
@@ -148,7 +183,7 @@ nav {
 }
 
 .movements__date {
-  font-size: 1.1rem;
+  font-size: var(--date-font-size);
   text-transform: uppercase;
   font-weight: 500;
   color: #666;
@@ -163,7 +198,7 @@ nav {
 }
 
 .movements__value {
-  font-size: 1.7rem;
+  font-size: var(--amt-font-size);
   margin-left: auto;
 }
 
@@ -177,14 +212,14 @@ nav {
 }
 
 .summary__label {
-  font-size: 1.2rem;
+  font-size: var(--summary-label-font-size);
   font-weight: 500;
   text-transform: uppercase;
   margin-right: 0.8rem;
 }
 
 .summary__value {
-  font-size: 2.2rem;
+  font-size: var(--balance-label-font-size);
   margin-right: 2.5rem;
 }
 
@@ -291,7 +326,192 @@ h2 {
   text-align: right;
   font-size: 1.25rem;
 }
+.d-pc-none {
+  display: none;
+}
+.d-pc-none-2 {
+  display: none;
+}
+.d-mb-none-2 {
+  /* display:  */
+}
 
 .timer {
   font-weight: 600;
+}
+.d-none {
+  display: none;
+}
+
+@media (max-width: 935px) {
+  :root {
+    --balance-font-size: 3rem;
+    --balance-label-font-size: 1.8rem;
+    --balance-date-font-size: 1.2rem;
+    --date-font-size: 1rem;
+    --amt-font-size: 1.6rem;
+    --main-font-size: 1.6rem;
+    --logo-height: 3.5rem;
+  }
+  nav {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem 0;
+  }
+  .app {
+    width: 80%;
+  }
+  .d-pc-none {
+    display: block;
+  }
+  .d-pc-none-2 {
+    display: block;
+  }
+  .d-mb-none-2 {
+    /* display: none; */
+  }
+  .mb-search {
+    margin: 2rem auto 4rem;
+  }
+  .login__input {
+    padding: 0.2rem 1rem;
+  }
+  .movements,
+  .summary {
+    grid-column: 1 / span 2;
+  }
+  .summary {
+    flex-direction: column;
+  }
+  .summary__label,
+  .summary__value {
+    background-color: #fff;
+    padding: 0.7rem 1.6rem;
+    border: 1px solid #ccc;
+  }
+  .summary__label {
+    width: 100%;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+  }
+  .summary__value {
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    background-color: ghostwhite;
+  }
+  .summary__value,
+  .btn--sort {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .deposit {
+    background: linear-gradient(#39b385, #9be15d);
+  }
+  .withdrawal {
+    background: linear-gradient(to top left, #ffb003, #ffcb03);
+  }
+  .interest {
+    background: linear-gradient(to top left, #e52a5a, #ff585f);
+  }
+  .btn--sort {
+    width: 100%;
+    background-color: none;
+    margin-right: auto;
+    text-align: left;
+  }
+  .operation {
+    grid-column: 1 / span 2;
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.2);
+  }
+  .logout-timer {
+    grid-column: 1 / span 2;
+    margin: 3rem auto 2rem;
+  }
+}
+
+@media (max-width: 566px) {
+  :root {
+    --balance-font-size: 2rem;
+  }
+  .app {
+    width: 100%;
+  }
+  .balance {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .balance .balance__value,
+  .balance div {
+    border: 1px solid #ccc;
+    padding: 0.7rem 1.4rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+  }
+  .balance .balance__label,
+  .balance .balance__date {
+    color: #333;
+  }
+  .balance .balance__value {
+    background-color: ghostwhite;
+  }
+  .balance div {
+    background-color: darkseagreen;
+  }
+  .movements {
+    border: 1px solid #ccc;
+  }
+  .summary__label {
+    padding: 0.7rem 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --balance-label-font-size: 1.5rem;
+    --balance-date-font-size: 1.1rem;
+    --balance-font-size: 1.8rem;
+    --amt-font-size: 1.4rem;
+  }
+  body {
+    padding: 2rem 1.4rem;
+  }
+  .login-mb {
+    flex-direction: column;
+    gap: 1.2rem 0;
+    margin-top: 2rem;
+  }
+  .login-mb input {
+    width: 100%;
+    padding: 0.2rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .movements__row {
+    padding: 2rem 1.4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+  }
+  .movements__type,
+  .movements__date {
+    /* margin: 0 auto;
+    text-align: left; */
+    margin-right: auto;
+  }
+  .movements__value {
+    width: 100%;
+    grid-column: 1/2;
+    margin-top: 0.6rem;
+  }
+  .operation {
+    padding: 2rem 2rem;
+  }
+  /* .login-mb::before {
+    content: 'Enter name in small case';
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #39b385;
+  } */
 }
